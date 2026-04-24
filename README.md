@@ -15,7 +15,7 @@
 | **Real-World Workflows** <br> `Research · Code gen · Data pipelines · Browser auto` |
 | **Secure Execution Environments** <br> `Hosted sandboxes · VMs · Containers · Serverless` |
 
-</dev>
+</div>
 
 ## Table of contents
 
