@@ -54,7 +54,7 @@ The observe → act → check loop is a classic ReAct pattern applied to browser
 
 **[Skyvern](https://github.com/Skyvern-AI/skyvern)** — Automates browser workflows using vision models instead of DOM selectors. Tags: `execution` `perception` `python`
 
-**[AgentQL](https://github.com/AgentQL/agentql)** — Queries web page elements using natural language instead of CSS selectors. Tags: `perception` `python`
+**[AgentQL](https://github.com/tinyfish-io/agentql)** — Queries web page elements using natural language instead of CSS selectors. Tags: `perception` `python`
 
 **[LaVague](https://github.com/lavague-ai/LaVague)** — Translates natural language instructions into browser automation actions. Tags: `execution` `perception` `python`
 
