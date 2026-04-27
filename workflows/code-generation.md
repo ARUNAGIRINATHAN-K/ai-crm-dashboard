@@ -46,7 +46,6 @@ The edit-test-fix loop is the core of this workflow. A good code generation agen
 
 **[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks in a sandboxed environment (formerly OpenDevin). Tags: `planning` `execution` `python`
 
-**[Mentat](https://github.com/AbanteAI/mentat)** — Assists with code changes by understanding the full project context. Tags: `execution` `python`
 
 **[GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer)** — Generates entire codebases from a single specification prompt. Tags: `execution` `planning` `python`
 
