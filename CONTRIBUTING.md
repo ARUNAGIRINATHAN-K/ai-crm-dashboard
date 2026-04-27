@@ -127,4 +127,4 @@ We commit to reviewing every PR within **7 days**. If your PR hasn't received a 
 
 ## Questions?
 
-Open a [Discussion](https://github.com/ARUNAGIRINATHAN-K/Awesome-Agentic-Workflows/discussions) if you're unsure whether a tool belongs, which category to use, or how to write the description. We'd rather help you get it right than reject a PR.
+Open an [Issue](https://github.com/ARUNAGIRINATHAN-K/Awesome-Agentic-Workflows/issues) if you're unsure whether a tool belongs, which category to use, or how to write the description. We'd rather help you get it right than reject a PR.

@@ -107,7 +107,7 @@ def multi_agent_debate(question: str, num_rounds: int = 3):
 | **[LangGraph](https://github.com/langchain-ai/langgraph)** | Multi-agent graphs with supervisor or swarm patterns | Python, TS |
 | **[Agency Swarm](https://github.com/VRSEN/agency-swarm)** | OpenAI Assistants–based multi-agent orchestration | Python |
 | **[Swarm](https://github.com/openai/swarm)** | Lightweight multi-agent handoff framework from OpenAI | Python |
-| **[MetaGPT](https://github.com/geekan/MetaGPT)** | Software company simulation with PM, architect, and engineer roles | Python |
+| **[MetaGPT](https://github.com/FoundationAgents/MetaGPT)** | Software company simulation with PM, architect, and engineer roles | Python |
 
 ## When to use multi-agent vs. other patterns
 

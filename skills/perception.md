@@ -25,7 +25,7 @@ The right choice depends on latency budget and content complexity. For a researc
 
 ### Web browsing and scraping
 
-**[Firecrawl](https://github.com/mendableai/firecrawl)** — Crawls websites and returns clean markdown ready for LLM consumption. Tags: `perception` `python` `typescript`
+**[Firecrawl](https://github.com/firecrawl/firecrawl)** — Crawls websites and returns clean markdown ready for LLM consumption. Tags: `perception` `python` `typescript`
 
 **[Crawl4AI](https://github.com/unclecode/crawl4ai)** — Extracts structured data from web pages using LLM-friendly output formats. Tags: `perception` `python`
 
@@ -41,19 +41,19 @@ The right choice depends on latency budget and content complexity. For a researc
 
 ### Document parsing
 
-**[Docling](https://github.com/DS4SD/docling)** — Parses PDFs, DOCX, and slides into structured text with layout understanding. Tags: `perception` `python`
+**[Docling](https://github.com/docling-project/docling)** — Parses PDFs, DOCX, and slides into structured text with layout understanding. Tags: `perception` `python`
 
-**[Marker](https://github.com/VikParuchuri/marker)** — Converts PDF to markdown with high accuracy for tables, equations, and figures. Tags: `perception` `python`
+**[Marker](https://github.com/datalab-to/marker)** — Converts PDF to markdown with high accuracy for tables, equations, and figures. Tags: `perception` `python`
 
 **[Unstructured](https://github.com/Unstructured-IO/unstructured)** — Ingests and preprocesses documents across 25+ file types for downstream LLM use. Tags: `perception` `python` `pipeline`
 
-**[LlamaParse](https://github.com/run-llama/llama_parse)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
+**[LlamaParse](https://github.com/run-llama/llama_cloud_services)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
 
 **[PyMuPDF](https://github.com/pymupdf/PyMuPDF)** — Extracts text, images, and metadata from PDFs with fast C-based bindings. Tags: `perception` `python`
 
 ### OCR and vision
 
-**[Surya](https://github.com/VikParuchuri/surya)** — Runs OCR and layout detection on documents in 90+ languages. Tags: `perception` `python`
+**[Surya](https://github.com/datalab-to/surya)** — Runs OCR and layout detection on documents in 90+ languages. Tags: `perception` `python`
 
 **[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)** — Recognizes text in images across 80+ languages with lightweight models. Tags: `perception` `python`
 

@@ -41,7 +41,7 @@ The challenge is matching the communication channel to the urgency and audience.
 
 **[FastAPI-Mail](https://github.com/sabuhish/fastapi-mail)** — Adds email sending capability to FastAPI-based agent services. Tags: `communication` `python`
 
-**[Mailtrap](https://github.com/railsware/mailtrap-python)** — Tests and sends emails with delivery tracking for agent workflows. Tags: `communication` `python`
+**[Mailtrap](https://github.com/mailtrap/mailtrap-python)** — Tests and sends emails with delivery tracking for agent workflows. Tags: `communication` `python`
 
 ### Chat platforms
 

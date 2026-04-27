@@ -51,17 +51,17 @@ Detailed write-ups for each category live in the [`skills/`](skills/) directory.
 
 Tools that let agents see, read, and parse the external world.
 
-**[Firecrawl](https://github.com/mendableai/firecrawl)** — Crawls websites and returns clean markdown ready for LLM consumption. Tags: `perception` `python` `typescript`
+**[Firecrawl](https://github.com/firecrawl/firecrawl)** — Crawls websites and returns clean markdown ready for LLM consumption. Tags: `perception` `python` `typescript`
 
 **[Crawl4AI](https://github.com/unclecode/crawl4ai)** — Extracts structured data from web pages using LLM-friendly output formats. Tags: `perception` `python`
 
-**[Docling](https://github.com/DS4SD/docling)** — Parses PDFs, DOCX, and slides into structured text with layout understanding. Tags: `perception` `python`
+**[Docling](https://github.com/docling-project/docling)** — Parses PDFs, DOCX, and slides into structured text with layout understanding. Tags: `perception` `python`
 
-**[Marker](https://github.com/VikParuchuri/marker)** — Converts PDF to markdown with high accuracy for tables, equations, and figures. Tags: `perception` `python`
+**[Marker](https://github.com/datalab-to/marker)** — Converts PDF to markdown with high accuracy for tables, equations, and figures. Tags: `perception` `python`
 
 **[Unstructured](https://github.com/Unstructured-IO/unstructured)** — Ingests and preprocesses documents across 25+ file types for downstream LLM use. Tags: `perception` `python` `pipeline`
 
-**[Surya](https://github.com/VikParuchuri/surya)** — Runs OCR and layout detection on documents in 90+ languages. Tags: `perception` `python`
+**[Surya](https://github.com/datalab-to/surya)** — Runs OCR and layout detection on documents in 90+ languages. Tags: `perception` `python`
 
 **[Jina Reader](https://github.com/jina-ai/reader)** — Converts any URL to LLM-ready text via a simple API prefix. Tags: `perception` `typescript`
 
@@ -71,7 +71,7 @@ Tools that let agents see, read, and parse the external world.
 
 **[ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** — A web scraping python library that uses LLMs to create scraping pipelines. Tags: `perception` `pipeline` `python`
 
-**[LlamaParse](https://github.com/run-llama/llama_parse)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
+**[LlamaParse](https://github.com/run-llama/llama_cloud_services)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
 
 ### Memory
 
@@ -113,7 +113,7 @@ Strategies and frameworks that let agents decompose tasks and decide what to do 
 
 **[Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm)** — Explores multiple reasoning paths in parallel before committing. Tags: `planning` `python`
 
-**[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks autonomously (formerly OpenDevin). Tags: `planning` `execution` `python`
+**[OpenHands](https://github.com/OpenHands/OpenHands)** — Plans and executes multi-step software engineering tasks autonomously (formerly OpenDevin). Tags: `planning` `execution` `python`
 
 ### Execution
 
@@ -176,7 +176,7 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
 
-**[Aider](https://github.com/paul-gauthier/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
+**[Aider](https://github.com/Aider-AI/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
 
 **[Cline](https://github.com/cline/cline)** — An autonomous coding agent that works directly in VS Code to write, execute, and test code. Tags: `execution` `typescript`
 
@@ -184,7 +184,7 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 
 ### Data pipelines
 
-**[Hamilton](https://github.com/DAGWorks-Inc/hamilton)** — Defines data transformations as Python functions wired into a DAG. Tags: `pipeline` `python`
+**[Hamilton](https://github.com/apache/hamilton)** — Defines data transformations as Python functions wired into a DAG. Tags: `pipeline` `python`
 
 **[Prefect](https://github.com/PrefectHQ/prefect)** — Orchestrates data workflows with retries, caching, and observability. Tags: `pipeline` `python`
 
@@ -202,7 +202,7 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 
 **[LangGraph](https://github.com/langchain-ai/langgraph)** — Builds stateful, multi-step agent loops with branching and human-in-the-loop. Tags: `planning` `orchestration` `python` `langgraph`
 
-**[Burr](https://github.com/DAGWorks-Inc/burr)** — Tracks and manages multi-step agent state machines with observability. Tags: `planning` `python`
+**[Burr](https://github.com/apache/burr)** — Tracks and manages multi-step agent state machines with observability. Tags: `planning` `python`
 
 ---
 
@@ -260,7 +260,7 @@ These frameworks wire skills, workflows, and environments together into complete
 | **[Agency Swarm](https://github.com/VRSEN/agency-swarm)** | Python | OpenAI Assistants API orchestration | Multi-agent systems using OpenAI's native tools |
 | **[Composio](https://github.com/ComposioHQ/composio)** | Python, TS | 250+ tool integrations with managed auth | Agents that need to call many external APIs |
 | **[Smolagents](https://github.com/huggingface/smolagents)** | Python | Minimalist library for building agents that write Python code | Simple agent workflows leveraging code execution |
-| **[Phidata](https://github.com/phidatahq/phidata)** | Python | Framework for building memory-stateful, multi-modal agents | Agents needing built-in memory and tool integrations |
+| **[Phidata](https://github.com/agno-agi/agno)** | Python | Framework for building memory-stateful, multi-modal agents | Agents needing built-in memory and tool integrations |
 | **[Swarm](https://github.com/openai/swarm)** | Python | Educational framework for exploring multi-agent orchestration | Learning multi-agent handoffs and patterns |
 
 ---

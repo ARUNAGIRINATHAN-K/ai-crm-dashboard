@@ -34,9 +34,9 @@ The edit-test-fix loop is the core of this workflow. A good code generation agen
 
 ## Real projects implementing this workflow
 
-**[Aider](https://github.com/paul-gauthier/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
+**[Aider](https://github.com/Aider-AI/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
 
-**[SWE-agent](https://github.com/princeton-nlp/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
+**[SWE-agent](https://github.com/SWE-agent/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
 
@@ -44,10 +44,10 @@ The edit-test-fix loop is the core of this workflow. A good code generation agen
 
 **[Devika](https://github.com/stitionai/devika)** — An open-source AI software engineer that can understand high-level instructions and write code to build features. Tags: `execution` `planning` `python`
 
-**[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks in a sandboxed environment (formerly OpenDevin). Tags: `planning` `execution` `python`
+**[OpenHands](https://github.com/OpenHands/OpenHands)** — Plans and executes multi-step software engineering tasks in a sandboxed environment (formerly OpenDevin). Tags: `planning` `execution` `python`
 
 
-**[GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer)** — Generates entire codebases from a single specification prompt. Tags: `execution` `planning` `python`
+**[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)** — Generates entire codebases from a single specification prompt. Tags: `execution` `planning` `python`
 
 ## Pseudocode
 

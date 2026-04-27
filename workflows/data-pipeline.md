@@ -31,7 +31,7 @@ The agent's role in this workflow is not to replace traditional ETL tools but to
 
 ## Real projects implementing this workflow
 
-**[Hamilton](https://github.com/DAGWorks-Inc/hamilton)** — Defines data transformations as Python functions wired into a DAG. Tags: `pipeline` `python`
+**[Hamilton](https://github.com/apache/hamilton)** — Defines data transformations as Python functions wired into a DAG. Tags: `pipeline` `python`
 
 **[Prefect](https://github.com/PrefectHQ/prefect)** — Orchestrates data workflows with retries, caching, and observability. Tags: `pipeline` `python`
 

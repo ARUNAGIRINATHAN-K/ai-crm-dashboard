@@ -51,7 +51,7 @@ See the [`patterns/`](../patterns/) directory for in-depth explanations of each 
 
 ### Task-specific planners
 
-**[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks autonomously (formerly OpenDevin). Tags: `planning` `execution` `python`
+**[OpenHands](https://github.com/OpenHands/OpenHands)** — Plans and executes multi-step software engineering tasks autonomously (formerly OpenDevin). Tags: `planning` `execution` `python`
 
 **[Semantic Kernel](https://github.com/microsoft/semantic-kernel)** — Integrates LLM function calling with enterprise plugins and planners. Tags: `planning` `execution` `python` `typescript`
 
