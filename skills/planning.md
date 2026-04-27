@@ -43,7 +43,7 @@ See the [`patterns/`](../patterns/) directory for in-depth explanations of each 
 
 **[DSPy](https://github.com/stanfordnlp/dspy)** — Optimizes LLM prompts and chains programmatically instead of manually. Tags: `planning` `python`
 
-**[LATS](https://github.com/larats-x/lats)** — Combines Monte Carlo tree search with LLM reasoning for complex planning. Tags: `planning` `python`
+**[LATS](https://github.com/lapisrocks/LanguageAgentTreeSearch)** — Combines Monte Carlo tree search with LLM reasoning for complex planning. Tags: `planning` `python`
 
 **[Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm)** — Explores multiple reasoning paths in parallel before committing. Tags: `planning` `python`
 
