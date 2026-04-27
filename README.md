@@ -67,6 +67,12 @@ Tools that let agents see, read, and parse the external world.
 
 **[Browser Use](https://github.com/browser-use/browser-use)** — Gives LLM agents full browser control for web interaction and data extraction. Tags: `perception` `execution` `python`
 
+**[Stagehand](https://github.com/browserbase/stagehand)** — An AI web browsing framework that uses Playwright with LLM-native commands like `page.act()`. Tags: `perception` `execution` `typescript`
+
+**[ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** — A web scraping python library that uses LLMs to create scraping pipelines. Tags: `perception` `pipeline` `python`
+
+**[LlamaParse](https://github.com/run-llama/llama_parse)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
+
 ### Memory
 
 Systems that let agents store, retrieve, and reason over past interactions.
@@ -87,6 +93,8 @@ Systems that let agents store, retrieve, and reason over past interactions.
 
 **[Motorhead](https://github.com/getmetal/motorhead)** — Manages conversation context windows with automatic summarization. Tags: `memory` `rust` `python`
 
+**[Letta](https://github.com/letta-ai/letta)** — Provides an OS-like memory management system for LLMs to manage long-term state. Tags: `memory` `python`
+
 ### Planning
 
 Strategies and frameworks that let agents decompose tasks and decide what to do next.
@@ -105,7 +113,7 @@ Strategies and frameworks that let agents decompose tasks and decide what to do 
 
 **[Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm)** — Explores multiple reasoning paths in parallel before committing. Tags: `planning` `python`
 
-**[OpenDevin](https://github.com/OpenDevin/OpenDevin)** — Plans and executes multi-step software engineering tasks autonomously. Tags: `planning` `execution` `python`
+**[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks autonomously (formerly OpenDevin). Tags: `planning` `execution` `python`
 
 ### Execution
 
@@ -168,6 +176,10 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 **[SWE-agent](https://github.com/princeton-nlp/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
+
+**[Cline](https://github.com/cline/cline)** — An autonomous coding agent that works directly in VS Code to write, execute, and test code. Tags: `execution` `typescript`
+
+**[Devika](https://github.com/stitionai/devika)** — An open-source AI software engineer that can understand high-level instructions and write code to build features. Tags: `execution` `planning` `python`
 
 ### Data pipelines
 
@@ -246,6 +258,9 @@ These frameworks wire skills, workflows, and environments together into complete
 | **[LlamaIndex Workflows](https://github.com/run-llama/llama_index)** | Python, TS | Event-driven async workflows | Data-heavy agents with complex retrieval needs |
 | **[Agency Swarm](https://github.com/VRSEN/agency-swarm)** | Python | OpenAI Assistants API orchestration | Multi-agent systems using OpenAI's native tools |
 | **[Composio](https://github.com/ComposioHQ/composio)** | Python, TS | 250+ tool integrations with managed auth | Agents that need to call many external APIs |
+| **[Smolagents](https://github.com/huggingface/smolagents)** | Python | Minimalist library for building agents that write Python code | Simple agent workflows leveraging code execution |
+| **[Phidata](https://github.com/phidatahq/phidata)** | Python | Framework for building memory-stateful, multi-modal agents | Agents needing built-in memory and tool integrations |
+| **[Swarm](https://github.com/openai/swarm)** | Python | Educational framework for exploring multi-agent orchestration | Learning multi-agent handoffs and patterns |
 
 ---
 
