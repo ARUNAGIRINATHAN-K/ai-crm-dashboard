@@ -40,7 +40,11 @@ The edit-test-fix loop is the core of this workflow. A good code generation agen
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
 
-**[OpenDevin](https://github.com/OpenDevin/OpenDevin)** — Plans and executes multi-step software engineering tasks in a sandboxed environment. Tags: `planning` `execution` `python`
+**[Cline](https://github.com/cline/cline)** — An autonomous coding agent that works directly in VS Code to write, execute, and test code. Tags: `execution` `typescript`
+
+**[Devika](https://github.com/stitionai/devika)** — An open-source AI software engineer that can understand high-level instructions and write code to build features. Tags: `execution` `planning` `python`
+
+**[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — Plans and executes multi-step software engineering tasks in a sandboxed environment (formerly OpenDevin). Tags: `planning` `execution` `python`
 
 **[Mentat](https://github.com/AbanteAI/mentat)** — Assists with code changes by understanding the full project context. Tags: `execution` `python`
 
