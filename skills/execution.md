@@ -47,7 +47,7 @@ This is why execution and [environments](../environments/README.md) go hand-in-h
 
 **[CrewAI Tools](https://github.com/crewAIInc/crewAI-tools)** — Bundles pre-built tools for search, scraping, and file operations in agent pipelines. Tags: `execution` `python` `crewai`
 
-**[LangChain Tools](https://github.com/langchain-ai/langchain/tree/master/libs/community)** — Provides 100+ integrations for search, math, databases, and APIs. Tags: `execution` `python` `langchain`
+**[LangChain Tools](https://github.com/langchain-ai/langchain)** — Provides 100+ integrations for search, math, databases, and APIs. Tags: `execution` `python` `langchain`
 
 **[Semantic Kernel](https://github.com/microsoft/semantic-kernel)** — Integrates LLM function calling with enterprise plugins and planners. Tags: `execution` `planning` `python` `typescript`
 
