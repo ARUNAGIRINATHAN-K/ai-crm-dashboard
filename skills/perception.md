@@ -33,6 +33,10 @@ The right choice depends on latency budget and content complexity. For a researc
 
 **[Browser Use](https://github.com/browser-use/browser-use)** — Gives LLM agents full browser control for web interaction and data extraction. Tags: `perception` `execution` `python`
 
+**[Stagehand](https://github.com/browserbase/stagehand)** — An AI web browsing framework that uses Playwright with LLM-native commands like `page.act()`. Tags: `perception` `execution` `typescript`
+
+**[ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** — A web scraping python library that uses LLMs to create scraping pipelines. Tags: `perception` `pipeline` `python`
+
 **[Tavily](https://github.com/tavily-ai/tavily-python)** — Provides search API optimized for LLM agents needing real-time web data. Tags: `perception` `python`
 
 ### Document parsing
@@ -42,6 +46,8 @@ The right choice depends on latency budget and content complexity. For a researc
 **[Marker](https://github.com/VikParuchuri/marker)** — Converts PDF to markdown with high accuracy for tables, equations, and figures. Tags: `perception` `python`
 
 **[Unstructured](https://github.com/Unstructured-IO/unstructured)** — Ingests and preprocesses documents across 25+ file types for downstream LLM use. Tags: `perception` `python` `pipeline`
+
+**[LlamaParse](https://github.com/run-llama/llama_parse)** — A GenAI-native document parser specifically designed to extract complex tables and layouts. Tags: `perception` `python`
 
 **[PyMuPDF](https://github.com/pymupdf/PyMuPDF)** — Extracts text, images, and metadata from PDFs with fast C-based bindings. Tags: `perception` `python`
 
