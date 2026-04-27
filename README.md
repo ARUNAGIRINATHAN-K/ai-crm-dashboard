@@ -107,7 +107,7 @@ Strategies and frameworks that let agents decompose tasks and decide what to do 
 
 **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — Structures agent outputs and tool calls with type-safe validation. Tags: `planning` `execution` `python`
 
-**[LATS](https://github.com/larats-x/lats)** — Combines Monte Carlo tree search with LLM reasoning for complex planning. Tags: `planning` `python`
+**[LATS](https://github.com/lapisrocks/LanguageAgentTreeSearch)** — Combines Monte Carlo tree search with LLM reasoning for complex planning. Tags: `planning` `python`
 
 **[Reflexion](https://github.com/noahshinn/reflexion)** — Lets agents learn from mistakes via verbal self-reflection loops. Tags: `planning` `python`
 
@@ -131,7 +131,7 @@ Tools that let agents run code, call APIs, and take actions in the real world.
 
 **[CrewAI Tools](https://github.com/crewAIInc/crewAI-tools)** — Bundles pre-built tools for search, scraping, and file operations in agent pipelines. Tags: `execution` `python` `crewai`
 
-**[LangChain Tools](https://github.com/langchain-ai/langchain/tree/master/libs/community)** — Provides 100+ integrations for search, math, databases, and APIs. Tags: `execution` `python` `langchain`
+**[LangChain Tools](https://github.com/langchain-ai/langchain)** — Provides 100+ integrations for search, math, databases, and APIs. Tags: `execution` `python` `langchain`
 
 **[Semantic Kernel](https://github.com/microsoft/semantic-kernel)** — Integrates LLM function calling with enterprise plugins and planners. Tags: `execution` `planning` `python` `typescript`
 
@@ -171,11 +171,12 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 
 ### Code generation
 
-**[Aider](https://github.com/paul-gauthier/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
 
 **[SWE-agent](https://github.com/princeton-nlp/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
+
+**[Aider](https://github.com/paul-gauthier/aider)** — Edits code across multiple files in a git repo via natural language. Tags: `execution` `python`
 
 **[Cline](https://github.com/cline/cline)** — An autonomous coding agent that works directly in VS Code to write, execute, and test code. Tags: `execution` `typescript`
 
@@ -195,7 +196,7 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 
 **[Skyvern](https://github.com/Skyvern-AI/skyvern)** — Automates browser workflows using vision models instead of DOM selectors. Tags: `execution` `perception` `python`
 
-**[AgentQL](https://github.com/AgentQL/agentql)** — Queries web page elements using natural language instead of CSS selectors. Tags: `perception` `python`
+**[AgentQL](https://github.com/tinyfish-io/agentql)** — Queries web page elements using natural language instead of CSS selectors. Tags: `perception` `python`
 
 ### Multi-step reasoning
 
