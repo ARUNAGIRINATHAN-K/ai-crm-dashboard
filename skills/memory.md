@@ -46,6 +46,8 @@ Storing memories is easy. Retrieving the _right_ memory at the _right_ time is t
 
 **[Motorhead](https://github.com/getmetal/motorhead)** — Manages conversation context windows with automatic summarization. Tags: `memory` `rust` `python`
 
+**[Letta](https://github.com/letta-ai/letta)** — Provides an OS-like memory management system for LLMs to manage long-term state. Tags: `memory` `python`
+
 **[LangMem](https://github.com/langchain-ai/langmem)** — Provides long-term memory primitives for LangGraph agents. Tags: `memory` `python` `langgraph`
 
 ## When to use what — decision guide
