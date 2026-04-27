@@ -172,7 +172,7 @@ Detailed write-ups for each workflow live in the [`workflows/`](workflows/) dire
 ### Code generation
 
 
-**[SWE-agent](https://github.com/princeton-nlp/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
+**[SWE-agent](https://github.com/SWE-agent/SWE-agent)** — Resolves GitHub issues autonomously by reading, planning, and patching code. Tags: `execution` `planning` `python`
 
 **[Continue](https://github.com/continuedev/continue)** — Adds AI code assistance directly inside VS Code and JetBrains IDEs. Tags: `execution` `typescript`
 
