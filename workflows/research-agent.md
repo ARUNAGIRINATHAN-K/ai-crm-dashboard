@@ -41,7 +41,7 @@ The critical loop is between synthesis and search. A good research agent recogni
 
 **[Tavily](https://github.com/tavily-ai/tavily-python)** — Provides search API optimized for LLM agents needing real-time web data. Tags: `perception` `python`
 
-**[Langchain RAG templates](https://github.com/langchain-ai/langchain/tree/master/templates)** — Offers pre-built retrieval-augmented generation pipelines for research workflows. Tags: `pipeline` `python` `langchain`
+**[Langchain RAG templates](https://github.com/langchain-ai/langchain)** — Offers pre-built retrieval-augmented generation pipelines for research workflows. Tags: `pipeline` `python` `langchain`
 
 **[Khoj](https://github.com/khoj-ai/khoj)** — Acts as a personal AI research assistant that searches your notes and the web. Tags: `pipeline` `perception` `python`
 
