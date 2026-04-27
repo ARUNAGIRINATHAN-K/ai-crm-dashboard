@@ -1,6 +1,6 @@
 <div align="center">
 
-![alt text](img/agentic-workflow.png)
+![alt text](img/9.png)
 
 # Awesome Agentic Workflows [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
@@ -15,7 +15,7 @@
 | **Real-World Workflows** <br> `Research · Code gen · Data pipelines · Browser auto` |
 | **Secure Execution Environments** <br> `Hosted sandboxes · VMs · Containers · Serverless` |
 
-</dev>
+</div>
 
 ## Table of contents
 
