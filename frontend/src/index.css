@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Inter', sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc; /* Slate-50 off-white background */
+  color: #334155; /* Slate-700 primary body text */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Force headings to render as Slate-900 with clean hierarchy weights */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.025em;
+  color: #0f172a !important; /* Slate-900 dark gray */
+  font-weight: 600 !important;
+}
+
+/* Numeric text alignment for KPIs and metrics tables */
+.num-align {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: -0.05em;
+}
+
+/* Shadcn-style clean white card panels with thin borders and soft shadows */
+.glass-panel {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important; /* Slate-200 dividers */
+  border-radius: 8px !important; /* rounded-lg (8px) */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important; /* soft shadow-sm */
+}
+
+.glass-panel-hover {
+  transition: all 0.15s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important; /* Slate-300 hover border */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Form input element defaults overrides */
+input, select, textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important; /* Slate-300 borders */
+  color: #0f172a !important; /* Slate-900 text */
+  border-radius: 6px !important; /* rounded-md */
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0ea5e9 !important; /* sky-500 vibrant focus */
+  outline: none;
+  box-shadow: 0 0 0 1px #0ea5e9 !important;
+}
+
+/* Custom Scrollbars suited for Light Mode */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 handle */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9; /* sky-500 handle on hover */
+}
+
+/* Disable gradients and glowing effects to maintain minimalism */
+.glow-btn::after {
+  display: none !important;
+}
+
+/* Redefine Tailwind v4 theme variables to force off-white/sky-blue mapping */
+@theme {
+  /* Surface mapping */
+  --color-slate-950: #f8fafc; /* Main background: slate-50 */
+  --color-slate-900: #ffffff; /* Card/Modal/Drawer background: pure white */
+  --color-slate-800: #f1f5f9; /* Containers/badges background: slate-100 */
+  --color-slate-700: #e2e8f0; /* Thin dividers: slate-200 */
+  
+  /* Text and borders mapping */
+  --color-slate-500: #64748b; /* Secondary text and timestamps: slate-500 */
+  --color-slate-400: #475569; /* slate-600 */
+  --color-slate-300: #334155; /* slate-700 body text */
+  --color-slate-200: #1e293b; /* slate-800 bold text */
+  --color-slate-100: #0f172a; /* slate-900 heading text */
+
+  /* Vibrant Sky Blue Accent replacing indigo */
+  --color-indigo-700: #0284c7; /* sky-700 */
+  --color-indigo-600: #0ea5e9; /* sky-500 */
+  --color-indigo-500: #38bdf8; /* sky-400 */
+  --color-indigo-400: #7dd3fc;
+
+  /* Force rounded borders to match shadcn look */
+  --radius-xl: 8px; /* Map rounded-xl to 8px (rounded-lg) */
+  --radius-2xl: 8px; /* Map rounded-2xl to 8px */
+}

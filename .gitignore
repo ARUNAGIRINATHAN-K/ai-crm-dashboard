@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+/dist
+/build
+
+# Environments and Keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Custom cache
+.gemini/
+.agents/
+.parcel-cache/
+.eslintcache
