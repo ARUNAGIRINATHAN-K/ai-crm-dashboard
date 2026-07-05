@@ -1,6 +1,6 @@
-# Full-Stack AI CRM Dashboard Application
+# Full Stack AI CRM Dashboard Application
 
-A multi-tenant, type-safe Customer Relationship Management (CRM) dashboard designed for B2B SaaS platforms. This application leverages artificial intelligence to analyze deals, draft communications, and audit pipelines, featuring a clean layout with tabular and Kanban views.
+A multi-tenant, type-safe Customer Relationship Management (CRM) dashboard designed for B2B SaaS platforms. This application leverages artificial intelligence from Groq to analyze deals, draft communications, and audit pipelines, featuring a clean layout with tabular and Kanban views.
 
 
 ## Core Features
@@ -11,7 +11,52 @@ A multi-tenant, type-safe Customer Relationship Management (CRM) dashboard desig
 - **Contacts Directory:** Searchable and taggable contact grid with a favorites toggle and detailed profile drawers.
 - **Follow-ups and Notes:** Lead-linked notes with pinning, due-date task checklists, and status progress bars.
 - **Analytics Dashboard:** Optimized MongoDB aggregation pipeline reporting pipeline velocity, KPI metrics, and win-revenue charts.
-- **Gemini AI Actions:** Structured JSON-schema summaries, outreach email copy generator, and automated pipeline health audits.
+- **Groq AI Actions:** Fast, structured JSON-schema summaries, outreach email copy generator, and automated pipeline health audits.
+
+### User Flow
+
+Based on my analysis of the project structure, here is the typical user flow for the AI CRM Dashboard application:
+
+#### 1. New User Registration
+
+1.  A new user starts at the `/register` page.
+2.  They fill out a registration form with their name, email, and password.
+3.  Upon submission, the system creates a new user account and automatically logs them in.
+4.  The user is then redirected to the main `/dashboard`.
+
+#### 2. Existing User Login
+
+1.  An existing user navigates to the `/login` page.
+2.  They enter their email and password.
+3.  The system validates their credentials. On success, it logs them in and redirects them to the `/dashboard`.
+4.  If a user has a valid session from a previous login, they will be taken directly to the `/dashboard`, skipping the login screen.
+
+#### 3. Core Application Usage (Authenticated User)
+
+Once logged in, the user interacts with the application within a consistent dashboard layout.
+
+1.  **Dashboard (`/dashboard`):** This is the landing page. It provides a high-level overview of key metrics and recent activity, likely pulling summary data for leads, tasks, and contacts.
+
+2.  **Lead Management (`/leads`):**
+    *   The user can view all sales leads in two formats: a Kanban-style board (with columns for stages like 'New', 'Qualified', 'Won') or a sortable/filterable table.
+    *   They can create a new lead by filling out a form with details like the deal name, value, and associated contact.
+    *   They can update a lead's stage by dragging and dropping it between columns on the Kanban board.
+    *   They can open a detailed view for any lead to see more information, add notes, or edit its properties.
+    *   They have options to search, filter, and export the leads list to a CSV file.
+
+3.  **Contact Management (`/contacts`):**
+    *   The user can navigate to the contacts page to view a list of all contacts.
+    *   From here, they can create, view, edit, and delete contact information.
+
+4.  **Task Management (`/tasks`):**
+    *   The user can visit the tasks page to manage their to-do items.
+    *   This section allows them to create new tasks, assign them, set due dates, and mark them as complete.
+
+#### 4. Logout
+
+*   When finished, the user can click a "Logout" button, which clears their session and redirects them back to the `/login` page.
+
+
 
 
 ## System Architecture
@@ -25,15 +70,14 @@ graph TD
         AuthGuard --> Controllers["API Controllers (Auth, Leads, Contacts, Tasks, Dashboard)"]
         
         Controllers --> DBQuery["Mongoose Database Queries (Multi-Tenant Scoped)"]
-        Controllers --> AIService["Gemini AI Service (ai.service.ts)"]
+        Controllers --> AIService["Groq AI Service (ai.service.ts)"]
     end
     
     subgraph DataStorage ["Data & AI Enclaves"]
         DBQuery <--> MongoDB[("MongoDB Database")]
-        AIService <--> |Structured JSON Prompts| Gemini["Google Gemini API (1.5-flash)"]
+        AIService <--> |Structured JSON Prompts| Groq["Groq API (Llama3)"]
     end
 ```
-
 
 ## Technology Stack
 
@@ -53,6 +97,9 @@ graph TD
 - Google Gemini API (google/generative-ai SDK)
 - JSON Web Token (JWT)
 - bcryptjs
+
+## Demos
+
 
 
 ## Local Setup and Installation
@@ -102,4 +149,4 @@ NODE_ENV=development
 Contributions to improve functionality, clean code architecture, or UI elements are welcome. Please open an issue to discuss proposed enhancements before submitting a pull request.
 
 ### License
-This project is licensed under the MIT License. Details can be found in the LICENSE file.
+This project is licensed under the MIT License. Details can be found in the [LICENSE](LICENSE) file.

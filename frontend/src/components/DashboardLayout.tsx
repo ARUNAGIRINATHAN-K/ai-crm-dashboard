@@ -31,9 +31,8 @@ export const DashboardLayout: React.FC = () => {
         <div>
           {/* Logo Frame */}
           <div className="flex items-center gap-3 mb-8 px-2">
-            <span className="text-2xl">🔮</span>
             <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-              Aura CRM
+              AI CRM
             </h1>
           </div>
 

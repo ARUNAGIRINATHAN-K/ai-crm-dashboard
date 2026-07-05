@@ -11,7 +11,7 @@ interface Note {
 interface Task {
   _id: string;
   title: string;
-  status: 'pending' | 'in-progress' | 'completed';
+  status: 'Pending' | 'Completed'; // Match backend enum
   dueDate: string;
 }
 
@@ -19,7 +19,7 @@ interface Lead {
   _id: string;
   name: string;
   value: number;
-  stage: string;
+  status: 'New' | 'Contacted' | 'Qualified' | 'Proposal' | 'Closed Won' | 'Closed Lost'; // Match backend enum
   contactId: {
     _id: string;
     name: string;
@@ -129,7 +129,7 @@ export const LeadDetailDrawer: React.FC<LeadDetailDrawerProps> = ({ leadId, onCl
     if (!lead) return;
     try {
       // Optimistically update
-      setLead({ ...lead, stage: newStage });
+      setLead({ ...lead, status: newStage as Lead['status'] }); // Cast to correct type
       await api.patch(`/leads/${lead._id}/stage`, { stage: newStage });
       onLeadUpdated();
     } catch (err) {
@@ -173,7 +173,7 @@ export const LeadDetailDrawer: React.FC<LeadDetailDrawerProps> = ({ leadId, onCl
   };
 
   const handleToggleTaskStatus = async (task: Task) => {
-    const newStatus = task.status === 'completed' ? 'pending' : 'completed';
+    const newStatus = task.status === 'Completed' ? 'Pending' : 'Completed'; // Match backend enum
     try {
       setTasks((prev) =>
         prev.map((t) => (t._id === task._id ? { ...t, status: newStatus } : t))
@@ -288,16 +288,16 @@ export const LeadDetailDrawer: React.FC<LeadDetailDrawerProps> = ({ leadId, onCl
             <div className="grid grid-cols-2 gap-4 bg-slate-900/20 p-4 rounded-xl border border-slate-900">
               <div>
                 <label className="text-[11px] font-semibold text-slate-500 uppercase">Estimated Value</label>
-                <p className="text-lg font-bold text-emerald-400 mt-0.5">${lead?.value.toLocaleString()}</p>
+                <p className="text-lg font-bold text-emerald-400 mt-0.5">₹{lead?.value.toLocaleString()}</p>
               </div>
               <div>
                 <label className="text-[11px] font-semibold text-slate-500 uppercase">Deal Stage</label>
                 <select
-                  value={lead?.stage}
+                  value={lead?.status}
                   onChange={(e) => handleStageChange(e.target.value)}
                   className="mt-1 block w-full rounded-lg border border-slate-800 bg-slate-950 py-1.5 px-3 text-xs text-indigo-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-clip-padding"
                 >
-                  {['new', 'contacted', 'qualified', 'proposal', 'negotiation', 'won', 'lost'].map((stage) => (
+                  {['New', 'Contacted', 'Qualified', 'Proposal', 'Closed Won', 'Closed Lost'].map((stage) => (
                     <option key={stage} value={stage} className="bg-slate-950 text-slate-200">
                       {stage.toUpperCase()}
                     </option>
@@ -324,7 +324,7 @@ export const LeadDetailDrawer: React.FC<LeadDetailDrawerProps> = ({ leadId, onCl
                       <button
                         onClick={() => handleToggleTaskStatus(task)}
                         className="text-slate-500 hover:text-indigo-400 cursor-pointer"
-                      >
+                      > {/* Note: Task status in backend is 'Pending'/'Completed' */}
                         {task.status === 'completed' ? (
                           <CheckSquare className="h-4 w-4 text-indigo-500" />
                         ) : (
@@ -409,8 +409,8 @@ export const LeadDetailDrawer: React.FC<LeadDetailDrawerProps> = ({ leadId, onCl
           <div className="space-y-6">
             {!aiSummary && !generatingSummary && (
               <div className="text-center py-8 space-y-4">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xl">
-                  🔮
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+                  <Sparkles className="h-6 w-6" />
                 </div>
                 <p className="text-sm text-slate-400 max-w-xs mx-auto">
                   Analyze client logs and generate an AI summary including sentiment, key takeaways, and next actions.

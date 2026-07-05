@@ -10,7 +10,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import {
-  DollarSign,
   TrendingUp,
   Users,
   CheckSquare,
@@ -151,14 +150,14 @@ export const Dashboard: React.FC = () => {
         {[
           {
             title: 'Pipeline Value',
-            value: `$${kpis.totalPipelineValue.toLocaleString()}`,
+            value: `₹${kpis.totalPipelineValue.toLocaleString()}`,
             desc: 'Leads excluding lost deals',
-            icon: DollarSign,
+            icon: TrendingUp,
             color: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/20',
           },
           {
             title: 'Won Deals',
-            value: `$${kpis.wonDealsValue.toLocaleString()}`,
+            value: `₹${kpis.wonDealsValue.toLocaleString()}`,
             desc: 'Total converted deal sizes',
             icon: TrendingUp,
             color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
@@ -231,7 +230,7 @@ export const Dashboard: React.FC = () => {
                   <span className="font-semibold text-slate-200 capitalize">{stage._id}</span>
                   <span className="text-[10px] text-slate-500 block">{stage.count} active deal{stage.count > 1 ? 's' : ''}</span>
                 </div>
-                <span className="font-bold text-slate-300">${stage.totalValue.toLocaleString()}</span>
+                <span className="font-bold text-slate-300">₹{stage.totalValue.toLocaleString()}</span>
               </div>
             ))}
 
@@ -279,7 +278,7 @@ export const Dashboard: React.FC = () => {
                     </span>
                   </td>
                   <td className="py-3 px-4 text-slate-500">{new Date(lead.createdAt).toLocaleDateString()}</td>
-                  <td className="py-3 pl-4 text-right font-extrabold text-emerald-400">${lead.value.toLocaleString()}</td>
+                  <td className="py-3 pl-4 text-right font-extrabold text-emerald-400">₹{lead.value.toLocaleString()}</td>
                 </tr>
               ))}
 

@@ -5,7 +5,6 @@ import {
   Plus,
   Loader2,
   X,
-  DollarSign,
   User,
   AlertCircle,
   Search,
@@ -219,7 +218,7 @@ export const Leads: React.FC = () => {
 
   // CSV Export
   const handleExportCSV = () => {
-    const headers = ['Deal Name', 'Deal Value ($)', 'Stage', 'Contact Person', 'Creation Date'];
+    const headers = ['Deal Name', 'Deal Value (₹)', 'Stage', 'Contact Person', 'Creation Date'];
     const rows = leads.map((l) => [
       l.name,
       l.value,
@@ -230,7 +229,10 @@ export const Leads: React.FC = () => {
 
     const csvContent =
       'data:text/csv;charset=utf-8,\uFEFF' +
-      [headers.join(','), ...rows.map((e) => e.map((val) => `"${val}"`).join(','))].join('\n');
+      [
+        headers.join(','),
+        ...rows.map((e) => e.map((val) => `"${val}"`).join(',')),
+      ].join('\n');
 
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
@@ -437,7 +439,7 @@ export const Leads: React.FC = () => {
                         {lead.name}
                       </td>
                       <td className="p-4 font-bold text-emerald-400">
-                        ${lead.value.toLocaleString()}
+                        ₹{lead.value.toLocaleString()}
                       </td>
                       <td className="p-4">
                         <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold border ${getStageBadgeStyles(lead.stage)}`}>
@@ -505,7 +507,7 @@ export const Leads: React.FC = () => {
                 <div className="p-4 border-b border-slate-900 bg-slate-900/20 flex justify-between items-center flex-shrink-0">
                   <div>
                     <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">{col.label}</h3>
-                    <p className="text-[10px] text-slate-500 font-medium mt-0.5">${colSum.toLocaleString()}</p>
+                    <p className="text-[10px] text-slate-500 font-medium mt-0.5">₹{colSum.toLocaleString()}</p>
                   </div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/15">
                     {stageLeads.length}
@@ -526,8 +528,7 @@ export const Leads: React.FC = () => {
 
                       <div className="mt-3 flex items-center justify-between">
                         <span className="text-[10px] font-bold text-emerald-400 flex items-center gap-0.5">
-                          <DollarSign className="h-3 w-3" />
-                          {lead.value.toLocaleString()}
+                          ₹{lead.value.toLocaleString()}
                         </span>
 
                         <span className="text-[10px] font-semibold text-slate-400 flex items-center gap-1 max-w-[120px] truncate">
@@ -591,7 +592,7 @@ export const Leads: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400">Estimated Value ($)</label>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400">Estimated Value (₹)</label>
                   <input
                     type="number"
                     required
