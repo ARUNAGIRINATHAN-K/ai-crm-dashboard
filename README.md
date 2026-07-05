@@ -95,6 +95,7 @@ graph TD
 
 ### Integrations and Core APIs
 - Google Gemini API (google/generative-ai SDK)
+- Groq API (groq-sdk)
 - JSON Web Token (JWT)
 - bcryptjs
 
@@ -117,6 +118,7 @@ JWT_SECRET=your_jwt_secret_key_here
 JWT_EXPIRES_IN=7d
 GEMINI_API_KEY=your_gemini_api_key_here
 NODE_ENV=development
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ### Installation Steps
@@ -127,7 +129,7 @@ NODE_ENV=development
    ```bash
    cd backend
    npm install
-   npm run dev
+   npm run dev # or 'npm run server' if you prefer that name
    ```
    The backend server will start listening on `http://localhost:5000`.
 
@@ -146,7 +148,7 @@ NODE_ENV=development
 ## Contributing and License
 
 ### Contributing
-Contributions to improve functionality, clean code architecture, or UI elements are welcome. Please open an issue to discuss proposed enhancements before submitting a pull request.
+Contributions to improve functionality, clean code architecture, or UI elements are welcome. Please read our [**Contributing Guidelines**](CONTRIBUTING.md) to get started.
 
 ### License
 This project is licensed under the MIT License. Details can be found in the [LICENSE](LICENSE) file.
