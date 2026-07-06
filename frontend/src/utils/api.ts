@@ -38,4 +38,8 @@ api.interceptors.response.use(
   }
 );
 
+export const loginAsGuest = () => {
+  return api.post('/auth/guest-login');
+};
+
 export default api;

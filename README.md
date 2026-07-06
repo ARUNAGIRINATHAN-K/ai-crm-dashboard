@@ -33,6 +33,14 @@ Based on my analysis of the project structure, here is the typical user flow for
 
 #### 3. Core Application Usage (Authenticated User)
 
+#### 3. Guest / Demo Login
+
+1.  A new visitor can click the "Log in as Guest / Demo" button on the login page.
+2.  The system instantly creates a temporary account, populates it with sample data (leads, contacts, tasks), and logs the user in.
+3.  This provides immediate access to a fully-featured dashboard to explore the CRM's capabilities.
+
+#### 4. Core Application Usage (Authenticated User)
+
 Once logged in, the user interacts with the application within a consistent dashboard layout.
 
 1.  **Dashboard (`/dashboard`):** This is the landing page. It provides a high-level overview of key metrics and recent activity, likely pulling summary data for leads, tasks, and contacts.
@@ -52,7 +60,7 @@ Once logged in, the user interacts with the application within a consistent dash
     *   The user can visit the tasks page to manage their to-do items.
     *   This section allows them to create new tasks, assign them, set due dates, and mark them as complete.
 
-#### 4. Logout
+#### 5. Logout
 
 *   When finished, the user can click a "Logout" button, which clears their session and redirects them back to the `/login` page.
 

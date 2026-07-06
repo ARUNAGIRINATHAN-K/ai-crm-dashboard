@@ -3,6 +3,8 @@ import { User } from '../models/user.model';
 import { AppError } from '../utils/appError';
 import { asyncHandler } from '../utils/asyncHandler';
 import { signToken } from '../utils/jwt';
+import { seedDemoData } from '../utils/seedData';
+import { faker } from '@faker-js/faker';
 
 /**
  * Controller handles registering new users.
@@ -79,6 +81,41 @@ export const login = asyncHandler(async (req: Request, res: Response, next: Next
       name: user.name,
       email: user.email,
       role: user.role,
+    },
+  });
+});
+
+/**
+ * Controller handles logging in as a guest.
+ */
+export const guestLogin = asyncHandler(async (_req: Request, res: Response, _next: NextFunction) => {
+  const guestName = `Guest ${faker.person.firstName()}`;
+  const guestEmail = faker.internet.email();
+  const guestPassword = faker.internet.password();
+
+  const newUser = await User.create({
+    name: guestName,
+    email: guestEmail,
+    password: guestPassword,
+    role: 'user',
+  });
+
+  await seedDemoData(newUser);
+
+  const token = signToken({
+    id: newUser.id,
+    email: newUser.email,
+    role: newUser.role,
+  });
+
+  res.status(201).json({
+    success: true,
+    token,
+    user: {
+      id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      role: newUser.role,
     },
   });
 });

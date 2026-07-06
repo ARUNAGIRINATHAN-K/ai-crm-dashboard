@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Mail, Lock, Loader2 } from 'lucide-react';
+import { Mail, Lock, Loader2, UserPlus } from 'lucide-react';
+import { loginAsGuest } from '../utils/api';
 
 export const Login: React.FC = () => {
-  const { login } = useAuth();
+  const { login, setToken } = useAuth();
   const navigate = useNavigate();
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isGuestSubmitting, setIsGuestSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +31,22 @@ export const Login: React.FC = () => {
       setError(err || 'Failed to authenticate. Please check your credentials.');
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleGuestLogin = async () => {
+    setIsGuestSubmitting(true);
+    setError(null);
+    try {
+      const { data } = await loginAsGuest();
+      // This is not ideal, but we need to reload the page to get the new user data
+      // A better solution would be to update the AuthContext to handle this case
+      localStorage.setItem('token', data.token);
+      window.location.href = '/dashboard';
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'Failed to login as guest.');
+    } finally {
+      setIsGuestSubmitting(false);
     }
   };
 
@@ -98,16 +116,31 @@ export const Login: React.FC = () => {
             </div>
           </div>
 
-          <div>
+          <div className="space-y-4">
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || isGuestSubmitting}
               className="flex w-full justify-center rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
             >
               {isSubmitting ? (
                 <Loader2 className="h-5 w-5 animate-spin" />
               ) : (
                 'Sign In'
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={handleGuestLogin}
+              disabled={isSubmitting || isGuestSubmitting}
+              className="flex w-full items-center justify-center rounded-xl bg-slate-700/50 px-4 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
+            >
+              {isGuestSubmitting ? (
+                <Loader2 className="h-5 w-5 animate-spin" />
+              ) : (
+                <>
+                  <UserPlus className="h-5 w-5 mr-2" />
+                  Log in as Guest / Demo
+                </>
               )}
             </button>
           </div>
